@@ -5,7 +5,7 @@ Full-Stack social media clone demo project
 
 
 ## Demo
-Live demo : ditter-social-media-clone.vercel.app
+Live demo : [https://ditter-social-media-clone.vercel.app/](https://ditter-social-media-clone.vercel.app/)
 
 ## Built With
 
