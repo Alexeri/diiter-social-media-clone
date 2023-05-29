@@ -3,25 +3,77 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  @apply h-full bg-black
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply h-full bg-black
+}
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100;
+    @apply min-h-screen;
+  }
+}
+
+@layer utilities {
+  .logOutPanel::after{
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: calc(50% - 10px);
+    border-top: 10px solid black;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }.logOutPanelW::after{
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: calc(50% - 10px);
+    border-top: 10px solid white;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+}
+
+.shadowed {
+  filter: drop-shadow(0.1rem 0.1rem 0.3rem rgba(131, 131, 131, 0.8));
+}
+
+.shadowBlue:hover{
+  filter: drop-shadow(0.1rem 0.1rem 0.3rem rgba(14, 165, 233, 0.8));
+}
+.shadowYellow:hover{
+  filter: drop-shadow(0.1rem 0.1rem 0.3rem rgba(234, 179, 8, 0.8));
+  
+}
+.shadowPink:hover{
+  filter: drop-shadow(0.1rem 0.1rem 0.3rem rgba(236, 72, 153, 0.8));
+  
+}
+.shadowPurple:hover{
+  filter: drop-shadow(0.1rem 0.1rem 0.3rem rgba(139, 92, 246, 0.8));
+}
+.shadowOrange:hover{
+  filter: drop-shadow(0.1rem 0.1rem 0.3rem rgba(249, 115, 22, 0.8));
+}
+.shadowGreen:hover{
+  filter: drop-shadow(0.1rem 0.1rem 0.3rem rgba(34, 197, 94, 0.8));
+}
+
+
+
+.mode-Default{
+  background-color: white;
+  color:black;
+}
+.mode-Dim{
+  background-color: rgb(21, 32, 43);
+  color:white;
+}
+.mode-Dark{
+  background-color: black;
+  color:white;
 }
